@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rummage Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <p id = "A">A</p>
+    <p id = "B">B</p>
+    <p id = "C">C</p>
+    <p id = "D">D</p>
+    <div id = "top-left">
+        <video id = "video1" autoplay muted>
+            <source src="videos/original_1.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <video id = "video2" muted style = "display: none;">
+            <source src="videos/results_1.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <p id = "tlb">Before</p>
+        <p id = "tla">After</p>
+    </div>
+
+    <div id = "top-right">
+        <video id = "video3" autoplay muted>
+            <source src="videos/original_2.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <video id = "video4"muted style = "display: none;">
+            <source src="videos/test_2.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <p id = "trb">Before</p>
+        <p id = "tra">After</p>
+    </div>
+    
+    <div id = "bottom-left">
+        <video id = "video5" autoplay muted>
+            <source src="videos/original_3.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <video id = "video6"muted style = "display: none;">
+            <source src="videos/test_3.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <p id = "blb">Before</p>
+        <p id = "bla">After</p>
+    </div>
+
+    <div id = "bottom-right">
+        <video id = "video7" autoplay muted>
+            <source src="videos/original_4.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <video id = "video8"muted style = "display: none;">
+            <source src="videos/test_4.mp4" type="video/mp4">
+            Your browser does not support the video tag
+        </video>
+        <p id = "brb">Before</p>
+        <p id = "bra">After</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video1 = document.getElementById('video1');
+            const video2 = document.getElementById('video2');
+            const tlb = document.getElementById("tlb");
+            const tla = document.getElementById("tla");
+            video1.addEventListener('ended', function() {
+                console.log("ended");
+                video1.style.display = 'none';
+                tlb.style.display = "none";
+                video2.style.display = 'block';
+                tla.style.display = "block";
+                video2.play();
+            });
+
+            video2.addEventListener('ended', function() {
+                video2.style.display = 'none';
+                tla.style.display = "none";
+                video1.style.display = 'block';
+                tlb.style.display = "block";
+                video1.play();
+            });
+
+            const video3= document.getElementById('video3');
+            const video4 = document.getElementById('video4');
+            const trb = document.getElementById("trb");
+            const tra = document.getElementById("tra");
+            video3.addEventListener('ended', function() {
+                console.log("ended");
+                video3.style.display = 'none';
+                trb.style.display = "none";
+                video4.style.display = 'block';
+                tra.style.display = "block";
+                video4.play();
+            });
+
+            video4.addEventListener('ended', function() {
+                video4.style.display = 'none';
+                tra.style.display = "none";
+                video3.style.display = 'block';
+                trb.style.display = "block";
+                video3.play();
+            });
+
+            const video5 = document.getElementById('video5');
+            const video6 = document.getElementById('video6');
+            const blb = document.getElementById("blb");
+            const bla = document.getElementById("bla");
+            video5.addEventListener('ended', function() {
+                console.log("ended");
+                video5.style.display = 'none';
+                blb.style.display = "none";
+                video6.style.display = 'block';
+                bla.style.display = "block";
+                video6.play();
+            });
+
+            video6.addEventListener('ended', function() {
+                video6.style.display = 'none';
+                bla.style.display = "none";
+                video5.style.display = 'block';
+                blb.style.display = "block";
+                video5.play();
+            });
+
+
+            const video7 = document.getElementById('video7');
+            const video8 = document.getElementById('video8');
+            const brb = document.getElementById("brb");
+            const bra = document.getElementById("bra");
+            video7.addEventListener('ended', function() {
+                console.log("ended");
+                video7.style.display = 'none';
+                brb.style.display = "none";
+                video8.style.display = 'block';
+                bra.style.display = "block";
+                video8.play();
+            });
+
+            video8.addEventListener('ended', function() {
+                video8.style.display = 'none';
+                bra.style.display = "none";
+                video7.style.display = 'block';
+                brb.style.display = "block";
+                video7.play();
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>
