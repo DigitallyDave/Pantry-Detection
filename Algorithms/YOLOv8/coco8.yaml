@@ -1,0 +1,33 @@
+path: D:\data_04 #dataset root directory might come across problems
+train: images\train #train images (relative to path)
+val: images\validation #validation images (relative to path)
+
+names:
+  0: Penne Pasta
+  1: Chicken Breast
+  2: White Bread
+  3: Apple
+  4: Soy Sauce
+  5: All Purpose Flour
+  6: Olive Oil
+  7: Vegetable Oil
+  8: Honey
+  9: Eggs
+  10: Milk
+  11: Fettuccine Noodles
+  12: Vanilla Extract
+  13: Rice
+  14: Chicken Broth
+  15: Bagged Cheese
+  16: Parmesan
+  17: Butter
+  18: White Vinegar
+  19: Onion
+  20: Garlic
+  21: Crushed Tomato
+  22: Celery
+  23: Carrot
+  24: Potato
+  25: Ground Beef
+  26: Tortilla
+  27: Avocado

@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rummage Home</title>
+    <link rel="stylesheet" href="./style/styles.css">
+<script defer src="bundle.js"></script></head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <p id="about"><a href="/Web Application/src/about.html">About</a></p>
+            </li>
+            <li><a href="index.html"><img src="/Web Application/public/images/logo.png" id="logo"></a></li>
+            <li>
+                <div id="btns">
+                    <button id="loginButton">Log in</button>
+                    <a href="signUp.html" id=result>
+                        <button id="sign-up">Sign-Up</button>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="main">
+        <div id='left'>
+            <video autoplay loop muted>
+                <source src="/Web Application/public/images/demo.mp4" type="video/mp4">
+                Your browser does not support the video tag
+            </video>
+        </div>
+        <div id='right'>
+            <img src="/Web Application/public/images/logo-art.png" id="logo-art">
+            <div id="over">
+                <div id="txt-over">
+                    Welcome to Rummage!<br> Simply upload a photo or video and receive recipes that utilize on-hand
+                    ingredients
+                </div>
+                <button id='upload-btn' onClick='clickFile()'>
+                    <input type='file' id='fileInput' accept='image/' onchange='uploadImage()'>
+                    <img src="/Web Application/public/images/cloud-upload.svg" id="upload-icon">
+                </button>
+                <a href="result.html" id=result></a>
+            </div>
+        </div>
+    </div>
+    <div id='onUpload'>
+        <div id='loading-container'>
+            <img src="/Web Application/public/images/logo-art.png" id='loading-logo'>
+            <div id="countdown"></div>
+        </div>
+    </div>
+
+    <!-- Log In Popup -->
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span id="closeLoginButton" class="closeLogin" onclick='closeLoginPop()'>&times;</span>
+            <!--  Log in form -->
+            <form id="login-form">
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button id="loginSubmit" id="signUpButton">Log in</button>
+                <!-- Don't have an account? -->
+                <p id="signUp">
+                    <span class="dontHaveAccount">Don't have an account?</span>
+                    <span id="loginSignUp"> <a href="signUp.html">Sign Up</a></span>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Webpack -->
+    <script src="/dist/bundle.js"></script>
+</body>
+
+</html>

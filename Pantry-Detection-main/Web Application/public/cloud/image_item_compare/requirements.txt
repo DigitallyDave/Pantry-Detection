@@ -1,5 +1,0 @@
-ultralytics
-opencv-python
-google-cloud-storage
-google-cloud-firestore
-functions-framework
